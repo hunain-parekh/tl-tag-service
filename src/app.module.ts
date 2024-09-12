@@ -8,7 +8,7 @@ import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }), 
-    MongooseModule.forRoot(process.env.TAGS_DATABASE_URL),
+    MongooseModule.forRoot(process.env.DATABASE_URL),
 
     TagsModule,
   ],
