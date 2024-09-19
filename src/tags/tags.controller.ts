@@ -6,12 +6,12 @@ import { Tag } from '../tags/dto/tags.dto';
 export class TagsController {
   constructor(private readonly tagsService: TagsService) {}
 
-  @Post('/add')
+  @Post()
   async create(@Body() Tag: Partial<Tag>): Promise<Tag> {
     return this.tagsService.create(Tag);
   }
 
-  @Get('/get')
+  @Get()
   async findAll(): Promise<Tag[]> {
     return this.tagsService.findAll();
   }
